@@ -1,0 +1,42 @@
+
+
+body{
+    text-align: center;
+    background-color: rgb(197, 197, 197);
+    font-family: 'Masque';
+}
+
+
+
+img{
+
+    width: 140px;
+    height: 120px;
+
+}
+
+input{
+    height: 50;
+    width: 600;
+    border-radius: 10px;
+    font-family: 'impact';
+    font-size: 20px;
+    
+}
+
+button{
+
+    height: 50;
+    width: 280;
+    font-size: 20px;
+    font-family: 'Masque';
+
+}
+
+textarea{
+
+    width: 600;
+    border-radius: 10px;
+    font-family: 'impact';
+    font-size: 20px;
+}

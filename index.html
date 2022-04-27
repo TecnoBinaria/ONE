@@ -1,0 +1,145 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Encriptador</title>
+</head>
+
+<script>
+
+function encriptar(){
+
+    var input1 = document.querySelector("input");
+    var text1 = input1.value
+    var txt = ""
+
+    for (i = 0; i < text1.length; i++) {
+        
+        
+
+        if (text1[i] == "a") {
+            
+                txt = txt +  "ai"
+
+        } else  if (text1[i] =="e") {
+            
+                txt = txt +  "enter"
+
+        } else  if (text1[i] == "i") {
+            
+                txt = txt +  "imes"
+
+        } else  if (text1[i] == "o") {
+            
+                 txt = txt +  "ober"
+
+        } else  if (text1[i] == "u") {
+            
+                 txt = txt +  "ufat"
+
+        } else {
+                     txt = txt + text1[i] 
+        }
+       
+        
+
+       
+    }
+
+    document.getElementById ("txtarea").value = txt ; 
+
+    input1.value = "";
+    input1.focus();
+
+   
+
+}
+
+
+function desencriptar(){
+
+var input1 = document.querySelector("input");
+var text1 = input1.value
+var txt = ""
+
+for (i = 0; i < text1.length; i++) {
+    
+    
+
+    if (text1[i] == "a") {
+
+            txt = txt +  "a"
+            i = i + 1
+
+    } else  if (text1[i] =="e") {
+        
+            txt = txt +  "e"
+            i = i + 4
+
+    } else  if (text1[i] == "i") {
+        
+            txt = txt +  "i"
+            i = i + 3
+
+    } else  if (text1[i] == "o") {
+        
+             txt = txt +  "o"
+             i = i + 3
+
+    } else  if (text1[i] == "u") {
+        
+             txt = txt +  "u"
+             i = i + 3
+    } else {
+                 txt = txt + text1[i] 
+    }
+   
+    
+
+   
+}
+
+document.getElementById ("txtarea").value = txt ; 
+
+input1.value = "";
+input1.focus();
+
+   
+
+}
+
+function Copiar() {
+        
+    var content = document.getElementById('txtarea');
+    content.select();
+    document.execCommand('copy');
+
+}
+
+
+</script>
+
+<body>
+    
+    <img src="img1.png" >
+
+   <h1> Encriptador de Textos </h1>
+
+   <p> Escribe el texto a encriptar o desencriptar </p>
+
+   <input>
+   <br> <br>
+    <button onclick="encriptar()" >Encriptar</button>  
+    <button onclick="desencriptar()"  > Desencriptar</button >
+    <br> <br>
+    <textarea id="txtarea" cols="30" rows="10"></textarea>
+    <br> <br>
+    <button onclick="Copiar()"  > Copiar Resultado </button >
+    <br> <br>
+
+
+<footer style="font-family: 'Impact';"> Desarrollado por Eduardo Alfaro Chacón 2022</footer>
+</body>
+</html>
